@@ -20,8 +20,7 @@
 
     <original-package android:name="com.android.browser" />
 
-    <uses-sdk android:minSdkVersion="21"
-        android:targetSdkVersion="23" />
+    <uses-sdk android:minSdkVersion="21"/>
 
     <uses-feature android:name="android.software.leanback"
     android:required="false" />
