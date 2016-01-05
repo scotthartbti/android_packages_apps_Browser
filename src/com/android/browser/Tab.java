@@ -23,6 +23,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
@@ -398,7 +399,7 @@ class Tab implements PictureListener {
             syncCurrentState(view, url);
             mWebViewController.onPageFinished(Tab.this);
 
-            if (view.getUrl().equals(HomeProvider.MOST_VISITED_URL)) {
+            if (mCurrentState.mUrl.equals(HomeProvider.MOST_VISITED_URL)) {
                 if (!mInMostVisitedPage) {
                     loadUrl(HomeProvider.MOST_VISITED, null);
                     mInMostVisitedPage = true;
